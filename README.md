@@ -96,7 +96,6 @@ The actuator positions are adjusted to tilt the platform forward or backward.
 
 All three actuators move together to raise or lower the platform.
 
-
 ## Control System
 
 The platform can be controlled using two 2-axis joysticks.
