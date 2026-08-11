@@ -10,7 +10,7 @@ The platform is controlled using an **Arduino Nano 33 IoT**, with joystick input
 
 > Add your best photo of the completed platform here.
 
-![3-DOF Stewart Platform](Images/Project1.jpg)
+![3-DOF Stewart Platform](Images/Project2.jpg)
 
 ---
 
