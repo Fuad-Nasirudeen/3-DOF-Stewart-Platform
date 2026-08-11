@@ -13,7 +13,7 @@ The platform is controlled using an **Arduino Nano 33 IoT**, with joystick input
 
 ---
 
-## 🎥 Demonstration
+## Demonstration
 
 > Add a demonstration GIF or video here.
 
@@ -25,7 +25,7 @@ The platform is controlled using an **Arduino Nano 33 IoT**, with joystick input
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 A Stewart platform is a type of parallel robotic mechanism that uses multiple actuators to control the position and orientation of a moving platform.
 
@@ -39,7 +39,7 @@ The project combines mechanical design, electronics, embedded programming, senso
 
 ---
 
-## 🎯 Objectives
+## Objectives
 
 The main objectives of this project are to:
 
@@ -54,13 +54,13 @@ The main objectives of this project are to:
 
 ---
 
-## ⚙️ System Architecture
+## System Architecture
 
 ![3-DOF Stewart Platform Architecture](Images/Platform_Architecture.png)
 
 ---
 
-## 🔩 Hardware
+## Hardware
 
 | Component | Quantity | Purpose |
 |---|---:|---|
@@ -76,7 +76,7 @@ The main objectives of this project are to:
 
 ---
 
-## 🦾 Degrees of Freedom
+## Degrees of Freedom
 
 The platform currently provides three degrees of freedom:
 
@@ -114,36 +114,7 @@ The joystick inputs are mapped to the desired platform movements:
 
 ---
 
-## 📐 Kinematics
-
-The platform uses coordinated actuator movements to produce the desired platform orientation.
-
-For a simplified 3-DOF implementation, the desired platform motion can be represented as:
-
-```text
-q = [Roll, Pitch, Heave]
-```
-
-These desired movements are converted into individual servo commands:
-
-```text
-[Roll, Pitch, Heave]
-          │
-          ▼
-   Motion Mapping
-          │
-          ▼
-[Servo 1, Servo 2, Servo 3]
-          │
-          ▼
-      Actuators
-```
-
-The current implementation focuses on practical servo control and coordinated movement rather than a full 6-DOF Stewart platform inverse-kinematics solution.
-
----
-
-## 🧭 MPU6050 Integration
+## MPU6050 Integration
 
 The MPU6050 provides accelerometer and gyroscope measurements that can be used to determine the platform's orientation.
 
@@ -162,26 +133,13 @@ The IMU can be used for:
 
 ---
 
-## 🔌 Electronics
+## Electronics
+
+![Schematic](Images/Electrical%20Schematic.png)
 
 ### Servo Power
 
 The three SG90 servos should be powered from an external 5V supply.
-
-```text
-          5V External Supply
-                │
-          ┌─────┴─────┐
-          │           │
-         +5V         GND
-          │           │
-          ▼           ▼
-       PCA9685     Common GND
-          │
-    ┌─────┼─────┐
-    │     │     │
-   S1    S2    S3
-```
 
 The Arduino and servo power system must share a **common ground**.
 
@@ -195,102 +153,7 @@ The project is developed using the **Arduino IDE**.
 
 - `Wire.h`
 - `Adafruit_PWMServoDriver.h`
-- MPU6050 library
-
-### Example Software Structure
-
-```text
-Arduino/
-│
-├── Manual_Control/
-│   └── Manual_Control.ino
-│
-├── MPU6050_Calibration/
-│   └── MPU6050_Calibration.ino
-│
-└── Platform_Control/
-    └── Platform_Control.ino
-```
-
----
-
-## 📁 Repository Structure
-
-```text
-3DOF-Stewart-Platform/
-│
-├── README.md
-├── LICENSE
-│
-├── Arduino/
-│   ├── Manual_Control/
-│   ├── MPU6050_Calibration/
-│   └── Platform_Control/
-│
-├── CAD/
-│   ├── CAD_Files/
-│   ├── STL/
-│   └── Drawings/
-│
-├── Electronics/
-│   ├── Wiring/
-│   └── Schematics/
-│
-├── Images/
-│   ├── final_platform.jpg
-│   ├── wiring_diagram.png
-│   └── assembly.jpg
-│
-├── Documentation/
-│   ├── Mechanical_Design.md
-│   ├── Control_System.md
-│   ├── Electronics.md
-│   └── Calibration.md
-│
-└── BOM/
-    └── Bill_of_Materials.xlsx
-```
-
----
-
-## 🛠️ Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/YOUR-USERNAME/3DOF-Stewart-Platform.git
-```
-
-### 2. Open the Arduino project
-
-Open the `.ino` file in Arduino IDE.
-
-### 3. Install the required libraries
-
-Install the required libraries through the Arduino IDE Library Manager.
-
-### 4. Connect the hardware
-
-Connect:
-
-- Arduino Nano 33 IoT
-- PCA9685
-- Three SG90 servos
-- Joysticks
-- MPU6050
-- External 5V power supply
-
-### 5. Calibrate the servos
-
-Before operating the platform, determine the neutral position and safe operating range of each servo.
-
-### 6. Upload the code
-
-Select the correct Arduino board and COM port, then upload the program.
-
-### 7. Test the platform
-
-Start with small movements and gradually increase the range.
+- `MPU6050 library`
 
 ---
 
