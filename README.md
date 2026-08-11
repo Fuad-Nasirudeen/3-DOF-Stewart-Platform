@@ -189,17 +189,16 @@ Potential improvements include:
 
 ---
 
-## 📷 Gallery
+## CAD models
 
-> Replace these placeholders with your actual project images.
 
 | Front View | Side View |
 |---|---|
-| ![Front](Images/front_view.jpg) | ![Side](Images/side_view.jpg) |
+| ![Side](Images/CAD1.png) | ![Top](Images/CAD2.png) |
 
-| Electronics | CAD Model |
-|---|---|
-| ![Electronics](Images/electronics.jpg) | ![CAD](Images/cad_model.jpg) |
+| Board Sketch | 
+|---|
+| ![Board Sketch](Images/SYSTEM%20ARCH.jpg) |
 
 ---
 
