@@ -1,6 +1,6 @@
 # 3-DOF Stewart Platform with X-plane Simulation
 
-A compact **3-Degree-of-Freedom (3-DOF) Stewart Platform** designed and developed as a mechatronics engineering project. The system uses three servo actuators to control the platform's **pitch, roll and heave** motions.
+A compact **3-Degree-of-Freedom (3-DOF) Stewart Platform** designed and developed as a mechatronics engineering project. The system uses three servo actuators to control the platform's **pitch, roll, and heave** motions.
 
 The platform is controlled using an **Arduino Nano 33 IoT**, with joystick inputs providing manual control and an **MPU6050 IMU** providing orientation feedback for potential stabilization and closed-loop control. The Platform is integrated with a **X-plane** flight simulator platform.  
 
@@ -96,48 +96,14 @@ The actuator positions are adjusted to tilt the platform forward or backward.
 
 All three actuators move together to raise or lower the platform.
 
-```text
-           Platform
-        ─────────────
-        ↑     ↑     ↑
-       S1    S2    S3
-```
 
----
-
-## 🎮 Control System
+## Control System
 
 The platform can be controlled using two 2-axis joysticks.
 
 The joystick inputs are mapped to the desired platform movements:
 
-```text
-Joystick Input
-       │
-       ▼
- Read Analog Values
-       │
-       ▼
- Apply Dead Zone
-       │
-       ▼
- Input Smoothing
-       │
-       ▼
- Calculate Desired Motion
-       │
-       ▼
- Calculate Servo Positions
-       │
-       ▼
- PCA9685 Servo Driver
-       │
-       ▼
- Servo Motors
-       │
-       ▼
- Platform Movement
-```
+
 
 ### Motion Mapping
 
