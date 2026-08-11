@@ -145,9 +145,9 @@ The Arduino and servo power system must share a **common ground**.
 
 ---
 
-## 🧰 Software
+## Software
 
-The project is developed using the **Arduino IDE**.
+The project is developed using the **Arduino IDE**, **Python** and **X-plane 11 Flight Simulator**.
 
 ### Main Libraries
 
@@ -157,7 +157,7 @@ The project is developed using the **Arduino IDE**.
 
 ---
 
-## ⚠️ Safety Considerations
+## Safety Considerations
 
 The platform contains moving mechanical components and should be tested carefully.
 
@@ -171,43 +171,8 @@ The platform contains moving mechanical components and should be tested carefull
 
 ---
 
-## 📊 Project Development
 
-### Phase 1 — Mechanical Design
-
-- Designed the Stewart platform structure.
-- Fabricated the mechanical components.
-- Mounted the servo actuators.
-- Assembled the moving platform.
-
-### Phase 2 — Electronics
-
-- Integrated Arduino Nano 33 IoT.
-- Added PCA9685 servo driver.
-- Implemented external servo power.
-- Connected joystick inputs.
-- Integrated MPU6050.
-
-### Phase 3 — Control
-
-- Implemented individual servo control.
-- Implemented joystick control.
-- Added roll movement.
-- Added pitch movement.
-- Added heave movement.
-- Implemented input dead zone and smoothing.
-
-### Phase 4 — Testing
-
-- Servo calibration
-- Motion testing
-- Joystick response testing
-- Platform stability testing
-- MPU6050 testing
-
----
-
-## 🚀 Future Improvements
+## Future Improvements
 
 Potential improvements include:
 
@@ -238,32 +203,17 @@ Potential improvements include:
 
 ---
 
-## 📚 Documentation
 
-Detailed documentation can be found in the `Documentation` folder:
+## Author
 
-- [Mechanical Design](Documentation/Mechanical_Design.md)
-- [Electronics](Documentation/Electronics.md)
-- [Control System](Documentation/Control_System.md)
-- [Calibration](Documentation/Calibration.md)
-
----
-
-## 👨‍💻 Author
-
-**Fuad Abdussalam**
+**Fuad-Nasirudeen Abdussalam**
 
 Mechatronics Engineering  
-Interested in Robotics, Embedded Systems and Industrial Automation.
+Interested in Robotics, Embedded Systems, and Industrial Automation.
 
 ---
 
-## 📄 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
----
-
-## ⭐ Support
+## Support
 
 If you find this project useful or interesting, consider giving the repository a ⭐ on GitHub.
