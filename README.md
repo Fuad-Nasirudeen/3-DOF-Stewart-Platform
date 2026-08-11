@@ -1,14 +1,13 @@
-# 3-DOF Stewart Platform
+# 3-DOF Stewart Platform with X-plane Simulation
 
-A compact **3-Degree-of-Freedom (3-DOF) Stewart Platform** designed and developed as a mechatronics engineering project. The system uses three servo actuators to control the platform's **pitch, roll, and heave** motions.
+A compact **3-Degree-of-Freedom (3-DOF) Stewart Platform** designed and developed as a mechatronics engineering project. The system uses three servo actuators to control the platform's **pitch, roll and heave** motions.
 
-The platform is controlled using an **Arduino Nano 33 IoT**, with joystick inputs providing manual control and an **MPU6050 IMU** providing orientation feedback for potential stabilization and closed-loop control.
+The platform is controlled using an **Arduino Nano 33 IoT**, with joystick inputs providing manual control and an **MPU6050 IMU** providing orientation feedback for potential stabilization and closed-loop control. The Platform is integrated with a **X-plane** flight simulator platform.  
 
 ---
 
 ## 📸 Project Preview
 
-> Add your best photo of the completed platform here.
 
 ![3-DOF Stewart Platform](Images/Project2.jpg)
 
@@ -36,7 +35,7 @@ This project implements a simplified **3-DOF Stewart platform** using three serv
 - **Pitch** – rotation about the Y-axis
 - **Heave** – vertical movement along the Z-axis
 
-The project combines mechanical design, electronics, embedded programming, sensor integration, and control systems.
+The project combines mechanical design, electronics, embedded programming, sensor integration and control systems.
 
 ---
 
@@ -51,42 +50,13 @@ The main objectives of this project are to:
 - Implement sensor-based orientation feedback.
 - Explore the control and kinematics of parallel robotic mechanisms.
 - Develop a modular platform that can be expanded for more advanced control strategies.
+- Fully integrate it with a Flight simulator platform.
 
 ---
 
 ## ⚙️ System Architecture
 
-```text
-                    ┌─────────────────┐
-                    │    Joysticks    │
-                    └────────┬────────┘
-                             │
-                             ▼
-                    ┌─────────────────┐
-                    │ Arduino Nano    │
-                    │    33 IoT       │
-                    └───────┬─┬───────┘
-                            │ │
-              ┌─────────────┘ └─────────────┐
-              │                             │
-              ▼                             ▼
-       ┌─────────────┐              ┌─────────────┐
-       │  MPU6050    │              │   PCA9685   │
-       │     IMU     │              │Servo Driver │
-       └─────────────┘              └──────┬──────┘
-                                           │
-                         ┌─────────────────┼─────────────────┐
-                         │                 │                 │
-                         ▼                 ▼                 ▼
-                      Servo 1           Servo 2           Servo 3
-                         │                 │                 │
-                         └─────────────────┼─────────────────┘
-                                           ▼
-                                  ┌─────────────────┐
-                                  │ Stewart        │
-                                  │ Platform       │
-                                  └─────────────────┘
-```
+![3-DOF Stewart Platform Architecture](Images/Platform_Architecture.png)
 
 ---
 
